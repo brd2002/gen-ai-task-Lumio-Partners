@@ -2,7 +2,6 @@
   "name": "ai-email-frontend",
   "version": "1.0.0",
   "private": true,
-  "proxy": "https://gen-ai-task-lumio-partners.onrender.com/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
