@@ -11,7 +11,7 @@ export default function App() {
   const handleGenerate = async () => {
     setStatus('Generating email...');
     try {
-      const res = await axios.post('https://gen-ai-task-lumio-partners.onrender.com:10000/api/generate', { prompt });
+      const res = await axios.post('https://gen-ai-task-lumio-partners-dp8j-ff4ls6s80-brd2002s-projects.vercel.app/api/generate', { prompt });
       setGeneratedEmail(res.data.email);
       setEmailContent(res.data.email);
       setStatus('Email generated! You can  below.');
@@ -23,7 +23,7 @@ export default function App() {
   const handleSend = async () => {
     setStatus('Sending email...');
     try {
-      await axios.post('https://gen-ai-task-lumio-partners.onrender.com:10000/api/send', { recipients, email: emailContent  , prompt});
+      await axios.post('https://gen-ai-task-lumio-partners-dp8j-ff4ls6s80-brd2002s-projects.vercel.app/api/send', { recipients, email: emailContent  , prompt});
       setStatus('Email sent!');
     } catch (err) {
       setStatus('Failed to send email.');
